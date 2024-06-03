@@ -1,0 +1,125 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.upload-input {
+  display: flex;
+  justify-content: end;
+  width: 465px;
+  border-radius: 10px;
+  margin-bottom: 21px;
+}
+.upload-input button img {
+  width: 32px;
+  height: 29px;
+}
+.upload-input button {
+  border: 10px solid #e0eafd;
+  border-radius: 10px;
+  padding: 13px;
+  background-color: white;
+  cursor: pointer;
+}
+.upload-box {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 465px;
+}
+.loading {
+  background-color: #edf4ff;
+  border: 1px solid #e0eafd;
+  padding: 20px;
+  border-radius: 10px;
+}
+.loading h1 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.loading p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #16182e;
+}
+.progress {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.progress-bar-container {
+  width: 365px;
+  height: 15px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid #e0eafd;
+}
+
+.progress-bar {
+  margin: 1px 0 0 3px;
+  background: #16182e;
+  border: 1px solid #fff;
+  border-radius: 21px;
+  height: 9px;
+  transition: 0.2s;
+}
+
+.file-list {
+  margin-top: 20px;
+}
+.checkbox {
+  width: 36px;
+  height: 36px;
+  background-color: #6ba91d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 100%;
+  margin-right: 15px;
+}
+.checkbox img {
+  width: 26px;
+  height: 26px;
+}
+.file {
+  display: flex;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.file .fileName {
+  font-size: 18px;
+  font-weight: 700;
+  color: #16182e;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.download-button {
+  width: 100%;
+  padding: 20px;
+  color: #17142e;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: transparent;
+  border: 2px solid #a1acd2;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
