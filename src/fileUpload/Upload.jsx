@@ -59,13 +59,13 @@ function File() {
         },
       })
       .then((response) => {
-        setProgress(0); // Reset progress
+        setProgress(0);
         setIsUploading(false);
-        fetchFiles(); // Refresh the list of files
+        fetchFiles();
       })
       .catch((error) => {
         console.error("Upload error: ", error);
-        setProgress(0); // Reset progress on error
+        setProgress(0);
         setIsUploading(false);
       });
   };
@@ -115,13 +115,12 @@ function File() {
     }
   };
   const handleDownloadAll = () => {
-    files.forEach(file => {
+    files.forEach((file) => {
       const fileUrl = file.original_file_url;
       const fileName = file.original_filename;
       downloadFile(fileUrl, fileName);
     });
   };
-
 
   return (
     <div className="container">
@@ -172,7 +171,9 @@ function File() {
             ))}
           </div>
         )}
-        <button className="download-button" onClick={handleDownloadAll}>Go to downloads</button>
+        <button className="download-button" onClick={handleDownloadAll}>
+          Go to downloads
+        </button>
       </div>
     </div>
   );
