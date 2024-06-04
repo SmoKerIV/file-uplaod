@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import fileDialog from "file-dialog";
 import "./Upload.css";
-import trash from "../assets/trash.svg";
-import check from "../assets/true.svg";
-import cloud from "../assets/cloud.svg";
+import trash from "../../assets/trash.svg";
+import check from "../../assets/true.svg";
+import cloud from "../../assets/cloud.svg";
 
 const PUBLIC_KEY = "4b4333d97cb1bb353e55";
 const SECRET_KEY = "22fbad1d191df600f26b";

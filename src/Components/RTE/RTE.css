@@ -1,0 +1,124 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: skyblue;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 25px 45px -17px #141e4242;
+  height: 476px;
+  width: 601px;
+}
+.container .title {
+  width: 431px;
+  margin-bottom: 7px;
+}
+.container .title p {
+  display: flex;
+  justify-self: start;
+  align-items: start;
+  font-size: 14px;
+  font-weight: 700;
+  color: #16182e;
+  font-family: "mulish", sans-serif;
+}
+.editor {
+  border: 1px solid #eae1e5;
+  color: #16182e;
+  border-radius: 5px;
+}
+.custom-editor {
+}
+.quill.custom-editor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fdfcfd;
+  border-radius: 5px;
+}
+.ql-toolbar.ql-snow img{
+    width: 22px;
+    height: 22px;
+}
+
+
+.ql-toolbar.ql-snow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  background-color: #fff;
+  border: none;
+  width: 411px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 25px -7px #e7dde9;
+  margin-top: 11px;
+}
+.ql-toolbar.ql-snow button {
+  padding: 0;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.ql-toolbar.ql-snow button:hover {
+  color: #16182e;
+  background-color: #f4e8f6;
+}
+.ql-toolbar.ql-snow button::after {
+  color: #16182e;
+  background-color: #f4e8f6;
+}
+
+.ql-container.ql-snow {
+  border: none;
+}
+
+.ql-editor {
+  height: 140px;
+  width: 431px;
+  background-color: #fdfcfd;
+  padding: 20px;
+  color: #16182e;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.btn {
+  width: 431px;
+}
+.btn p {
+  font-family: Mulish;
+  font-size: 14px;
+  font-weight: 700;
+  color: #898d9f;
+}
+.btn p span {
+  color: #687fe9;
+  cursor: pointer;
+}
+.btn button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 14px 31px;
+  background-color: #141e42;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  border: 1px solid #141e42;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn button:hover {
+  background-color: white;
+  color: #141e42;
+}
