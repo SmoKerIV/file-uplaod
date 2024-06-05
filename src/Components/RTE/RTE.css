@@ -44,11 +44,10 @@
   background-color: #fdfcfd;
   border-radius: 5px;
 }
-.ql-toolbar.ql-snow img{
-    width: 22px;
-    height: 22px;
+.ql-toolbar.ql-snow img {
+  width: 22px;
+  height: 22px;
 }
-
 
 .ql-toolbar.ql-snow {
   display: flex;
@@ -58,10 +57,15 @@
   background-color: #fff;
   border: none;
   width: 411px;
+  height: 36px;
   border-radius: 5px;
   box-shadow: 0px 1px 25px -7px #e7dde9;
   margin-top: 11px;
 }
+.ql-toolbar.ql-snow .ql-formats {
+  margin:5px 12.5px;
+}
+
 .ql-toolbar.ql-snow button {
   padding: 0;
   border: none;
@@ -73,11 +77,18 @@
   color: #16182e;
   background-color: #f4e8f6;
 }
-.ql-toolbar.ql-snow button::after {
-  color: #16182e;
-  background-color: #f4e8f6;
-}
 
+.ql-editor.ql-blank::before {
+  font-family: Mulish;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20.08px;
+  text-align: left;
+  font-style: normal;
+  color: #141E42;
+  opacity: 0.5;
+  margin-left: 10px;
+}
 .ql-container.ql-snow {
   border: none;
 }

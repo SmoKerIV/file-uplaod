@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css'; 
 import './RTE.css';
@@ -17,6 +17,7 @@ import ulist from '../../assets/rte/ulist.svg';
 
 const RTE = () => {
   const [value, setValue] = useState('');
+  const [activeButtons, setActiveButtons] = useState({});
 
   const customIcons = {
     bold: `<img src="${bold}" alt="bold" />`,
@@ -52,9 +53,43 @@ const RTE = () => {
   icons['code-block'] = customIcons.code;
   icons['list']['ordered'] = customIcons.listOrdered;
   icons['list']['bullet'] = customIcons.listBullet;
-  icons['align']['left'] = customIcons.alignLeft; // Default left align
+  icons['align']['left'] = customIcons.alignLeft; 
   icons['align']['center'] = customIcons.alignCenter;
   icons['align']['right'] = customIcons.alignRight;
+
+  const handleButtonClick = (button) => {
+    setActiveButtons(prevState => ({
+      ...prevState,
+      [button]: !prevState[button]
+    }));
+  };
+
+  useEffect(() => {
+    const toolbarButtons = document.querySelectorAll('.ql-toolbar .ql-formats button');
+    toolbarButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const format = button.classList[1].split('-')[1];
+        handleButtonClick(format);
+      });
+    });
+    return () => {
+      toolbarButtons.forEach(button => {
+        button.removeEventListener('click', () => {
+          const format = button.classList[1].split('-')[1];
+          handleButtonClick(format);
+        });
+      });
+    };
+  }, []);
+
+  useEffect(() => {
+    Object.keys(activeButtons).forEach(key => {
+      const button = document.querySelector(`.ql-${key}`);
+      if (button) {
+        button.style.backgroundColor = activeButtons[key] ? '#f4e8f6' : 'white';
+      }
+    });
+  }, [activeButtons]);
 
   return (
     <div className='root'>
