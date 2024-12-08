@@ -65,19 +65,19 @@ const RTE = () => {
   };
 
   useEffect(() => {
+    const handleClick = (event) => {
+      const format = event.currentTarget.classList[1].split('-')[1];
+      handleButtonClick(format);
+    };
+
     const toolbarButtons = document.querySelectorAll('.ql-toolbar .ql-formats button');
     toolbarButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const format = button.classList[1].split('-')[1];
-        handleButtonClick(format);
-      });
+      button.addEventListener('click', handleClick);
     });
+
     return () => {
       toolbarButtons.forEach(button => {
-        button.removeEventListener('click', () => {
-          const format = button.classList[1].split('-')[1];
-          handleButtonClick(format);
-        });
+        button.removeEventListener('click', handleClick);
       });
     };
   }, []);
